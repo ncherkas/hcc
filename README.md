@@ -20,7 +20,7 @@
 ```
 
 ## Solution
-My solution is a kind of double-checked locking using Hazelcast distributed objects - Lock and ICountDownLatch. Depending on value of config parameter "app.cluster.waitToBecomeActive" (see application.properties) application either performs start logic (in our case outputs "We are started!") on a 1st instance that is up and acquired a lock or waits until number of instances set by config param "app.cluster.size" are up and runs start logic after it - on a arbitrary instance that has acquired a lock. By doing this we ensure that start logic will be executed once and only once.
+My solution is a kind of double-checked locking using Hazelcast distributed objects - Lock, IAtomicReference and ICountDownLatch. Depending on value of config parameter "app.cluster.waitToBecomeActive" (see application.properties) application either performs start logic (in our case outputs "We are started!") on a 1st instance that is up and acquired a lock or waits until number of instances set by config param "app.cluster.size" are up and runs start logic after it - on a arbitrary instance that has acquired a lock. By doing this we ensure that start logic will be executed once and only once.
 
 ## Testing
 

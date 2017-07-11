@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Solution to the Hazelcast code challenge. It's a kind of double-checked locking using
- * Hazelcast distributed objects - Lock and ICountDownLatch.
+ * Hazelcast distributed objects - Lock, IAtomicReference and ICountDownLatch.
  * Depending on value of config parameter "app.cluster.waitToBecomeActive" (see application.properties)
  * application either performs start logic (in our case outputs "We are started!") on a 1st instance
  * that is up and acquired a lock or waits until number of instances set by config param "app.cluster.size"
