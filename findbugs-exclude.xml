@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <Match>
+    <Bug pattern="IMSE_DONT_CATCH_IMSE"/>
+  </Match>
+  <Match>
+    <Package name="com.ncherkas.hazelcast"/>
+  </Match>
+</FindBugsFilter>

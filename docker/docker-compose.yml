@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  hcc-app:
+    image: ncherkas/hazelcast-code-challenge
+    environment:
+        - HCC_CLUSTER_SIZE=${DOCKER_HCC_CLUSTER_SIZE}
+        - HCC_WAIT=${DOCKER_HCC_WAIT}
+    restart: on-failure
+
