@@ -25,7 +25,7 @@ My solution is a kind of double-checked locking using Hazelcast distributed obje
 ## Testing
 
 ### 1. Build instructions
-Simply run ```maven clean install``` in the project directory.
+Simply run ```mvn clean install``` in the project directory.
 
 ### 2. Unit tests
 Unit tests are checking two scenarios:
