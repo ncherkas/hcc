@@ -48,7 +48,7 @@ export DOCKER_HOST=unix:///var/run/docker.sock
 export DOCKER_HCC_CLUSTER_SIZE=10
 export DOCKER_HCC_WAIT=false
 ```
- - within docker directory run ```docker-compose up --scale hcc-app=$DOCKER_HCC_CLUSTER_SIZE -d``` - this will set up a cluster of 10 machines in detach mode
+ - within "docker" directory run ```docker-compose up --scale hcc-app=$DOCKER_HCC_CLUSTER_SIZE -d``` - this will set up a cluster of 10 machines in detach mode
  - wait a bit and run ```docker-compose logs | grep started!``` to search for the instance that executed start logic - it will be a single instance no matter what is the size of the cluster (I've tested max 50 containers)
  - run ```docker-compose stop ``` to stop the cluster
 
